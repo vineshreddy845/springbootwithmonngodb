@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/map")
@@ -35,5 +36,13 @@ public class contoller {
     @GetMapping("getalldocuments")
     public List<Pojo> pt(){
         return rpo.findAll();
+    }
+
+    @PutMapping("/put/{id}")
+    public Pojo pe( @RequestBody Pojo pr, @PathVariable(value="id") String id)
+    {
+        Pojo po= rpo.findById(id).get();
+        po.setName(pr.getName());
+        return rpo.save(po);
     }
 }
