@@ -1,0 +1,39 @@
+what is mongodb?
+A: mongodb is non-sql database. It is stores data in form of json-format(or) document-form like key-value pair.
+each of these documents consisting of key/value attributes.
+mongodb has set number of documents is called collections.
+
+          or
+
+mongodb is a collection of documents.
+mongodb stores data in form of documents(json format like key-value pair).
+
+Realtional(mysql etc)              difference                   mongodb(no=sql)
+
+Database                                                       Database
+
+Table                                                          collection
+
+Row                                                            Document
+
+Column                                                         Field
+
+Table join                                                     Embedded Documents.
+
+
+"important": " Id value automatically given by mongodb for our document. where we have primarykey(id) automatically generated for mysql database.
+
+example: Monngodb stores in json-format
+
+
+          {
+            "id":1223333333,
+            "name":"vinesh",
+            "age":2,
+            "names":["reddy", "json"]
+          }
+
+
+       we are connected mongodb database to our application using mongodb altas. we go to mongodb website . create account then we give database name, collection name. With ip address  we connect mongodb to our application. Where mongodb generates mongodb uri: we place it in our application propertities.
+
+
